@@ -51,4 +51,39 @@ let array3 = [
     {book: "anatomy", id: 4}
 ];
 
-getBookById(2, array);
+getBookById(1, array3);
+
+
+// المتجرر
+
+
+let input = prompt("ادخل السلعه");
+let array4 = [];
+
+while ( input != "انتهيت"){
+   let quantity = prompt("الكميه");
+   let price = prompt("السعر");
+   
+
+
+   array4.push({input: input , price: price , quantity: quantity});
+ 
+
+input = prompt("ادخل السلعه");
+
+}
+
+
+
+console.log("الفاتورة");
+
+let total = 0;
+for (let fa of array4) {
+  console.log(
+    fa.quantity + " " + fa.input + " " + fa.price + " USD"
+  );
+  total = total + fa.price * fa.quantity;
+}
+
+
+console.log(" المجموع : ", total);
